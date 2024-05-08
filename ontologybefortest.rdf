@@ -1,0 +1,1562 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#"
+     xml:base="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl">
+        <rdfs:comment xml:lang="ar">انطلوجيا الحكومة الالكترونية السودانية - الخدمات التي تقدمها وزارة الداخلية للمواطنين عبر مجمعات خدمة الجمهور .
+هذه الانطلوجيا تم تطويرها من قبل الباحث بدرالدين حسن الطاهر لنيل درجة الدكتوراة في نظم المعلومات من جامعة النيلين في السودان الخرطوم</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#Own -->
+
+    <owl:ObjectProperty rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#Own">
+        <owl:inverseOf rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#OwnedBy"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#Citizen"/>
+        <rdfs:range rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#Vehicle"/>
+        <rdfs:range rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#Weapon"/>
+        <rdfs:label xml:lang="ar">يملك</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#OwnedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#OwnedBy">
+        <rdfs:label xml:lang="ar">مملوك ل</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasBackgroundCheck -->
+
+    <owl:ObjectProperty rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasBackgroundCheck">
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#Citizen"/>
+        <rdfs:range rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#BackgroundCheck"/>
+        <rdfs:label xml:lang="ar">فحص امني</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasBirthCertificate -->
+
+    <owl:ObjectProperty rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasBirthCertificate">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#Citizen"/>
+        <rdfs:range rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#BirthCertificate"/>
+        <rdfs:label xml:lang="ar">شهادة ميلاد</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasBloodGroup -->
+
+    <owl:ObjectProperty rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasBloodGroup">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#NationalNumber"/>
+        <rdfs:range rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#BloodGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasDeathCertificate -->
+
+    <owl:ObjectProperty rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasDeathCertificate">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#Citizen"/>
+        <rdfs:range rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#DeathCertificate"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasDrivingLicense -->
+
+    <owl:ObjectProperty rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasDrivingLicense">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#Citizen"/>
+        <rdfs:range rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#DrivingLicense"/>
+        <rdfs:label xml:lang="ar">رخصة قيادة</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasFatherNationalNumber -->
+
+    <owl:ObjectProperty rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasFatherNationalNumber">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#BirthCertificate"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#NationalNumber"/>
+        <rdfs:range rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#NationalNumber"/>
+        <rdfs:label xml:lang="ar">الرقم الوطني للوالد</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasFatherNationality -->
+
+    <owl:ObjectProperty rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasFatherNationality">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#BirthCertificate"/>
+        <rdfs:range rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#Nationality"/>
+        <rdfs:label xml:lang="ar">جنسية الوالد</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasFatherReligion -->
+
+    <owl:ObjectProperty rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasFatherReligion">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#BirthCertificate"/>
+        <rdfs:range rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#Religion"/>
+        <rdfs:label xml:lang="ar">ديانة الوالد</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasGender -->
+
+    <owl:ObjectProperty rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasGender">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#BirthCertificate"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#DeathCertificate"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#NationalNumber"/>
+        <rdfs:range rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#Gender"/>
+        <rdfs:label xml:lang="ar">الجنس</rdfs:label>
+        <rdfs:label xml:lang="ar">النوع</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasIssuePlace -->
+
+    <owl:ObjectProperty rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasIssuePlace">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#BackgroundCheck"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#DrivingLicense"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#NationalCard"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#NationalNumber"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#Passport"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#VehicleRegistration"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#WeaponLicense"/>
+        <rdfs:range rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#ServiceProvider"/>
+        <rdfs:label>مركز الخدمة</rdfs:label>
+        <rdfs:label>مكان الاستخراج</rdfs:label>
+        <rdfs:label>مكان الاصدار</rdfs:label>
+        <rdfs:label xml:lang="ar">مكتب التسجيل</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasLIcenseType -->
+
+    <owl:ObjectProperty rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasLIcenseType">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#DrivingLicense"/>
+        <rdfs:range rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#DrivingLicenseType"/>
+        <rdfs:label xml:lang="ar">نوع رخصة القيادة</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasMaritalStatus -->
+
+    <owl:ObjectProperty rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasMaritalStatus">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#DeathCertificate"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#NationalNumber"/>
+        <rdfs:range rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#MaritalStatus"/>
+        <rdfs:label xml:lang="ar">الحالة الاجتماعية</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasMotherNationalNumber -->
+
+    <owl:ObjectProperty rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasMotherNationalNumber">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#BirthCertificate"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#NationalNumber"/>
+        <rdfs:range rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#NationalNumber"/>
+        <rdfs:label xml:lang="ar">الرقم الوطني للوالدة (إن وجد)</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasMotherNationality -->
+
+    <owl:ObjectProperty rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasMotherNationality">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#BirthCertificate"/>
+        <rdfs:range rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#Nationality"/>
+        <rdfs:label xml:lang="ar">جنسية الوالدة</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasNationalCard -->
+
+    <owl:ObjectProperty rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasNationalCard">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#Citizen"/>
+        <rdfs:range rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#NationalCard"/>
+        <rdfs:label xml:lang="ar">بطاقة الهوية الوطنية</rdfs:label>
+        <rdfs:label xml:lang="ar">بطاقة قومية</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasNationalNumber -->
+
+    <owl:ObjectProperty rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasNationalNumber">
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#BackgroundCheck"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#Citizen"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#DeathCertificate"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#NationalCard"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#NationalNumber"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#Passport"/>
+        <rdfs:range rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#NationalNumber"/>
+        <rdfs:comment xml:lang="ar">وهو رقم فريد يتم اعطاؤه للمواطن بعد ابراز شهادة الميلاد والتحقق من جنسية الوالد و الوالدة</rdfs:comment>
+        <rdfs:label xml:lang="ar">الرقم الوطني</rdfs:label>
+        <rdfs:label xml:lang="ar">رقم المواطنة</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasNationality -->
+
+    <owl:ObjectProperty rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasNationality">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#BackgroundCheck"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#DeathCertificate"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#NationalNumber"/>
+        <rdfs:range rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#Nationality"/>
+        <rdfs:label xml:lang="ar">الجنسية</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasNationalityType -->
+
+    <owl:ObjectProperty rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasNationalityType">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#NationalNumber"/>
+        <rdfs:range rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#NationalityType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasOccupation -->
+
+    <owl:ObjectProperty rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasOccupation">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#DeathCertificate"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#NationalNumber"/>
+        <rdfs:range rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#Occupation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasOwnerNationalNumber -->
+
+    <owl:ObjectProperty rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasOwnerNationalNumber">
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#VehicleRegistration"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#WeaponLicense"/>
+        <rdfs:range rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#NationalNumber"/>
+        <rdfs:label xml:lang="ar">الرقم الوطني للمالك</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasPassport -->
+
+    <owl:ObjectProperty rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasPassport">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#Citizen"/>
+        <rdfs:range rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#Passport"/>
+        <rdfs:label xml:lang="ar">جواز سفر</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasPassportType -->
+
+    <owl:ObjectProperty rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasPassportType">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#Passport"/>
+        <rdfs:range rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#PassportType"/>
+        <rdfs:label xml:lang="ar">نوع جواز السفر</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasPlaceOfBirth -->
+
+    <owl:ObjectProperty rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasPlaceOfBirth">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#BirthCertificate"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#DeathCertificate"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#NationalNumber"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasReligion -->
+
+    <owl:ObjectProperty rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasReligion">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#DeathCertificate"/>
+        <rdfs:range rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#Religion"/>
+        <rdfs:label xml:lang="ar">الديانة</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasVehicleRegistration -->
+
+    <owl:ObjectProperty rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasVehicleRegistration">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#Vehicle"/>
+        <rdfs:range rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#VehicleRegistration"/>
+        <rdfs:label xml:lang="ar">شهادة تسجيل مركبة</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasVehicleUsage -->
+
+    <owl:ObjectProperty rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasVehicleUsage">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#VehicleRegistration"/>
+        <rdfs:range rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#VehicleUsage"/>
+        <rdfs:label xml:lang="ar">اسنخدام المركبة</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasWeaponLicense -->
+
+    <owl:ObjectProperty rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasWeaponLicense">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#Weapon"/>
+        <rdfs:range rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#WeaponLicense"/>
+        <rdfs:label xml:lang="ar">رخصة سلاح</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasWeaponType -->
+
+    <owl:ObjectProperty rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasWeaponType">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#WeaponLicense"/>
+        <rdfs:range rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#WeaponType"/>
+        <rdfs:label xml:lang="ar">نوع السلاح</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasAge -->
+
+    <owl:DatatypeProperty rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasAge">
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#DeathCertificate"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+        <rdfs:label xml:lang="ar">العمر</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasBiometricData -->
+
+    <owl:DatatypeProperty rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasBiometricData">
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#BackgroundCheck"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#NationalCard"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#NationalNumber"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#Passport"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#WeaponLicense"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#byte"/>
+        <rdfs:label xml:lang="ar">البصمات</rdfs:label>
+        <rdfs:label xml:lang="ar">بصمة الاصابع</rdfs:label>
+        <rdfs:label xml:lang="ar">بصمة العين</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasBrand -->
+
+    <owl:DatatypeProperty rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasBrand">
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#VehicleRegistration"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="ar">ماركة المركبة</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasCauseOfDeath -->
+
+    <owl:DatatypeProperty rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasCauseOfDeath">
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#DeathCertificate"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="ar">تشخيص سبب الوفاة</rdfs:comment>
+        <rdfs:label xml:lang="ar">سبب الوفاة</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasCertificateNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasCertificateNumber">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#BirthCertificate"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#DeathCertificate"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="ar">رقم الشهادة</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasChassisNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasChassisNumber">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#VehicleRegistration"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="ar">رقم الشاسي</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasCheckDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasCheckDate">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#BackgroundCheck"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:label xml:lang="ar">تاريخ اجراء الفحص الامني</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasCheckDetails -->
+
+    <owl:DatatypeProperty rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasCheckDetails">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#BackgroundCheck"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="ar">تفاصيل الفحص</rdfs:label>
+        <rdfs:label xml:lang="ar">تقرير الفحص</rdfs:label>
+        <rdfs:label xml:lang="ar">توصيف الفحص</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasCheckNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasCheckNumber">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#BackgroundCheck"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="ar">رقم الفحص الامني</rdfs:label>
+        <rdfs:label xml:lang="ar">رقم الفيش والتفييش</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasCheckReason -->
+
+    <owl:DatatypeProperty rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasCheckReason">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#BackgroundCheck"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="ar">الغرض من الفحص</rdfs:label>
+        <rdfs:label xml:lang="ar">سبب الفحص</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasCheckResult -->
+
+    <owl:DatatypeProperty rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasCheckResult">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#BackgroundCheck"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="ar">نتيجة الفحص</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasCheckType -->
+
+    <owl:DatatypeProperty rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasCheckType">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#BackgroundCheck"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="ar">نوع الفحص</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasChildName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasChildName">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#BirthCertificate"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="ar">اسم المولود</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasCitizenshipID -->
+
+    <owl:DatatypeProperty rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasCitizenshipID">
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#NationalNumber"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="ar">الرقم الوطني</rdfs:label>
+        <rdfs:label xml:lang="ar">رقم المواطنة</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasColor -->
+
+    <owl:DatatypeProperty rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasColor">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#VehicleRegistration"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="ar">لون المركبة</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasDateOfBirth -->
+
+    <owl:DatatypeProperty rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasDateOfBirth">
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#BirthCertificate"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#NationalNumber"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:label xml:lang="ar">تاريخ الميلاد</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasDateOfBirthLetters -->
+
+    <owl:DatatypeProperty rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasDateOfBirthLetters">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#BirthCertificate"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="ar">تاريخ الميلاد بالاحرف</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasDateOfDeath -->
+
+    <owl:DatatypeProperty rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasDateOfDeath">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#DeathCertificate"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:label xml:lang="ar">تاريخ الوفاة</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasDeceasedName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasDeceasedName">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="ar">اسم المتوفى</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasDisability -->
+
+    <owl:DatatypeProperty rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasDisability">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#DrivingLicense"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:label xml:lang="ar">اعاقة</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasEmployer -->
+
+    <owl:DatatypeProperty rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasEmployer">
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#NationalNumber"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="ar">المخدّم</rdfs:label>
+        <rdfs:label xml:lang="ar">مكان العمل</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasEngineNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasEngineNumber">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#VehicleRegistration"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="ar">رقم الماكينة</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasExpiryDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasExpiryDate">
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#DrivingLicense"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#NationalCard"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#Passport"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#VehicleRegistration"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#WeaponLicense"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasFatherFullName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasFatherFullName">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#BirthCertificate"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="ar">اسم الوالد رباعي</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasFatherResidence -->
+
+    <owl:DatatypeProperty rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasFatherResidence">
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#BirthCertificate"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="ar">عنوان الوالد</rdfs:label>
+        <rdfs:label xml:lang="ar">مكان اقامة الوالد</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasFuelType -->
+
+    <owl:DatatypeProperty rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasFuelType">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#VehicleRegistration"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="ar">نوع الوقود</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasFullName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasFullName">
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#NationalNumber"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="ar">الاسم رباعي</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasHolderSignature -->
+
+    <owl:DatatypeProperty rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasHolderSignature">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#Passport"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#byte"/>
+        <rdfs:label xml:lang="ar">توقيع حامل الجواز</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasInssuranceName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasInssuranceName">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#VehicleRegistration"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="ar">اسم شركة التامين</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasInssuranceNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasInssuranceNumber">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="ar">رقم التامين</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasIssueAuthority -->
+
+    <owl:DatatypeProperty rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasIssueAuthority">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#BackgroundCheck"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#BirthCertificate"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#DrivingLicense"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#VehicleRegistration"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#WeaponLicense"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#byte"/>
+        <rdfs:label xml:lang="ar">امضاء سلطة الاصدار</rdfs:label>
+        <rdfs:label xml:lang="ar">ختم سلطة الاصدار</rdfs:label>
+        <rdfs:label xml:lang="ar">سلطة الاصدار</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasIssueDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasIssueDate">
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#BirthCertificate"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#DeathCertificate"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#DrivingLicense"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#NationalCard"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#NationalNumber"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#Passport"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#VehicleRegistration"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#WeaponLicense"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:label xml:lang="ar">تاريخ  التحرير</rdfs:label>
+        <rdfs:label xml:lang="ar">تاريخ الاصدار</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasLicenseNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasLicenseNumber">
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#DrivingLicense"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#VehicleRegistration"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#WeaponLicense"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="ar">رقم الرخصة</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasLicensePlate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasLicensePlate">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#VehicleRegistration"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="ar">رقم اللوحة</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasManufactureDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasManufactureDate">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#VehicleRegistration"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:label xml:lang="ar">سنة صنع المركبة</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasModel -->
+
+    <owl:DatatypeProperty rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasModel">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#VehicleRegistration"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="ar">موديل المركبة</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasMotherFullName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasMotherFullName">
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#BirthCertificate"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#NationalNumber"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="ar">اسم الوالدة رباعي</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasMotherResidence -->
+
+    <owl:DatatypeProperty rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasMotherResidence">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#BirthCertificate"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="ar">عنوان الوالدة</rdfs:label>
+        <rdfs:label xml:lang="ar">مكان اقامة الوالدة</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasNationalCardNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasNationalCardNumber">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#NationalCard"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasOfficerFullName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasOfficerFullName">
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#BirthCertificate"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#DeathCertificate"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#NationalCard"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#NationalNumber"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="ar">اسم الضابط رباعي</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasOfficerRank -->
+
+    <owl:DatatypeProperty rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasOfficerRank">
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#BirthCertificate"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#DeathCertificate"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#NationalCard"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#NationalNumber"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="ar">رتبة الضابط</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasOfficerSignature -->
+
+    <owl:DatatypeProperty rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasOfficerSignature">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#BirthCertificate"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#DeathCertificate"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#NationalCard"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#NationalNumber"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#byte"/>
+        <rdfs:label xml:lang="ar">توقيع الضابط</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasOwnershipRestriction -->
+
+    <owl:DatatypeProperty rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasOwnershipRestriction">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#VehicleRegistration"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="ar">قيود الملكية</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasPassportNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasPassportNumber">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#Passport"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="ar">رقم جواز السفر</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasPhone -->
+
+    <owl:DatatypeProperty rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasPhone">
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#DrivingLicense"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasPhoto -->
+
+    <owl:DatatypeProperty rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasPhoto">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#BackgroundCheck"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#DrivingLicense"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#NationalCard"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#NationalNumber"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#Passport"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#WeaponLicense"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#byte"/>
+        <rdfs:label xml:lang="ar">صورة</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasPlaceOfDeath -->
+
+    <owl:DatatypeProperty rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasPlaceOfDeath">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#DeathCertificate"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="ar">يتم فيها تحديد المستشفى او المركز الصحي الذي توفى فيه المواطن وتم فيه تحرير افادة حالة الوفاة من المدير الطبي او القمسيون الطبي</rdfs:comment>
+        <rdfs:label xml:lang="ar">مكان الوفاة</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasRegistryLocality -->
+
+    <owl:DatatypeProperty rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasRegistryLocality">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#BirthCertificate"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#DeathCertificate"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="ar">السجل عبارة عن دفتر يتم عبرة تسجيل حالات الولادة والوفاة وهو موزع عبر الولايات والمدن المختلفة لذلك عند استخراج شهادة ميلاد او شهادة وفاة يجب ان تتضمن مكان السجل- المحلية</rdfs:comment>
+        <rdfs:label xml:lang="ar">محلية السجل</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasRegistryNumberInRegister -->
+
+    <owl:DatatypeProperty rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasRegistryNumberInRegister">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#BirthCertificate"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#DeathCertificate"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="ar">رقم السجل في الصفحة</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasRegistryPageNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasRegistryPageNumber">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#BirthCertificate"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#DeathCertificate"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="ar">رقم صفحة السجل</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasRegistryState -->
+
+    <owl:DatatypeProperty rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasRegistryState">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#BirthCertificate"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#DeathCertificate"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="ar">السجل عبارة عن دفتر يتم عبرة تسجيل حالات الولادة والوفاة وهو موزع عبر الولايات والمدن المختلفة لذلك عند استخراج شهادة ميلاد او شهادة وفاة يجب ان تتضمن مكان السجل- الولاية</rdfs:comment>
+        <rdfs:label xml:lang="ar">ولاية السجل</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasResidence -->
+
+    <owl:DatatypeProperty rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasResidence">
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#DeathCertificate"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#DrivingLicense"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#NationalCard"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#VehicleRegistration"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#WeaponLicense"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="ar">العنوان</rdfs:label>
+        <rdfs:label xml:lang="ar">محل الاقامة</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasValidFrom -->
+
+    <owl:DatatypeProperty rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasValidFrom">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#BackgroundCheck"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:label xml:lang="ar">صالح من تاريخ</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasValidUntil -->
+
+    <owl:DatatypeProperty rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasValidUntil">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#BackgroundCheck"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:label xml:lang="ar">صالح حتى تاريخ</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasValidity -->
+
+    <owl:DatatypeProperty rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasValidity">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#VehicleRegistration"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="ar">الصلاحية</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasVisionDisability -->
+
+    <owl:DatatypeProperty rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasVisionDisability">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#DrivingLicense"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:label xml:lang="ar">اعاقة بصرية</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasWeaponGunshotType -->
+
+    <owl:DatatypeProperty rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasWeaponGunshotType">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#WeaponLicense"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="ar">مقاس طلقات الرسلاح تقاس بالملميتر</rdfs:comment>
+        <rdfs:label xml:lang="ar">العيار</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasWeaponNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasWeaponNumber">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#WeaponLicense"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="ar">رقم السلاح</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasWeaponTag -->
+
+    <owl:DatatypeProperty rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasWeaponTag">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#WeaponLicense"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="ar">وسم السلاح</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#Asset -->
+
+    <owl:Class rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#Asset">
+        <rdfs:subClassOf rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#MInistryOfInterior"/>
+        <rdfs:comment xml:lang="ar">الاصول والممتلكات تمثل هذه الفئة جميع الاصول والممتلكات التي يمكن للمواطن امتلاكها وتسجيلها عبر وزارة الداخلية مثل المركبات والاسلحة</rdfs:comment>
+        <rdfs:label xml:lang="ar">الاصول والممتلكات</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#BackgroundCheck -->
+
+    <owl:Class rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#BackgroundCheck">
+        <rdfs:subClassOf rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#CriminalEvidence"/>
+        <owl:hasKey rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasNationalNumber"/>
+        </owl:hasKey>
+        <owl:hasKey rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasCheckNumber"/>
+        </owl:hasKey>
+        <rdfs:comment xml:lang="ar">وثيقة تفيد بالحالة الامنية وخلفية الجرائم للمواطن ، وتعمل كشهادة حسن سير وسلوك</rdfs:comment>
+        <rdfs:label xml:lang="ar">الفحص الامني</rdfs:label>
+        <rdfs:label xml:lang="ar">الفيش والتفييش</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#BirthCertificate -->
+
+    <owl:Class rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#BirthCertificate">
+        <rdfs:subClassOf rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#CivilStatus"/>
+        <owl:hasKey rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasCertificateNumber"/>
+        </owl:hasKey>
+        <rdfs:comment xml:lang="ar">يتم تحريرها بعد ولادة المواطن</rdfs:comment>
+        <rdfs:label xml:lang="ar">شهادة الميلاد</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#BloodGroup -->
+
+    <owl:Class rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#BloodGroup">
+        <rdfs:subClassOf rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#Profile"/>
+        <rdfs:label xml:lang="ar">فصيلة الدم</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#Citizen -->
+
+    <owl:Class rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#Citizen">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#Own"/>
+                <owl:someValuesFrom rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#Vehicle"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#Own"/>
+                <owl:someValuesFrom rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#Weapon"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasBackgroundCheck"/>
+                <owl:someValuesFrom rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#BackgroundCheck"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasBirthCertificate"/>
+                <owl:allValuesFrom rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#BirthCertificate"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasDeathCertificate"/>
+                <owl:allValuesFrom rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#DeathCertificate"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasDrivingLicense"/>
+                <owl:allValuesFrom rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#DrivingLicense"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasNationalNumber"/>
+                <owl:allValuesFrom rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#NationalNumber"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasPassport"/>
+                <owl:allValuesFrom rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#Passport"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#Individual"/>
+        <owl:hasKey rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasBirthCertificate"/>
+        </owl:hasKey>
+        <owl:hasKey rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasDeathCertificate"/>
+        </owl:hasKey>
+        <owl:hasKey rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasDrivingLicense"/>
+        </owl:hasKey>
+        <owl:hasKey rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasNationalCard"/>
+        </owl:hasKey>
+        <owl:hasKey rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasNationalNumber"/>
+        </owl:hasKey>
+        <rdfs:comment xml:lang="ar">هو الشخص الذي يحمل جنسية البلد والرقم التعريفي الخاص بمواطني البلد</rdfs:comment>
+        <rdfs:label xml:lang="ar">مواطن</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#CivilRegistry -->
+
+    <owl:Class rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#CivilRegistry">
+        <rdfs:subClassOf rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#Service"/>
+        <rdfs:label xml:lang="ar">السجل المدني</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#CivilStatus -->
+
+    <owl:Class rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#CivilStatus">
+        <rdfs:subClassOf rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#CivilRegistry"/>
+        <rdfs:label xml:lang="ar">الاحوال المدنية</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#CriminalEvidence -->
+
+    <owl:Class rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#CriminalEvidence">
+        <rdfs:subClassOf rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#Service"/>
+        <rdfs:comment xml:lang="ar">الأدلة الجنائية</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#DeathCertificate -->
+
+    <owl:Class rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#DeathCertificate">
+        <rdfs:subClassOf rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#CivilStatus"/>
+        <owl:hasKey rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasNationalNumber"/>
+        </owl:hasKey>
+        <owl:hasKey rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasCertificateNumber"/>
+        </owl:hasKey>
+        <rdfs:comment xml:lang="ar">يتم تحريرها بعد وفاة المواطن</rdfs:comment>
+        <rdfs:label xml:lang="ar">شهادة وفاة</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#DrivingLicense -->
+
+    <owl:Class rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#DrivingLicense">
+        <rdfs:subClassOf rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#TrafficPolice"/>
+        <owl:hasKey rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasNationalNumber"/>
+        </owl:hasKey>
+        <owl:hasKey rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasLicenseNumber"/>
+        </owl:hasKey>
+        <rdfs:label xml:lang="ar">رخصة القيادة</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#DrivingLicenseType -->
+
+    <owl:Class rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#DrivingLicenseType">
+        <rdfs:subClassOf rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#DrivingLicense"/>
+        <rdfs:comment xml:lang="ar">لها عدة انواع ( ملاكي ، عام ، اليات ثقيلة ، دراجات بخارية)</rdfs:comment>
+        <rdfs:label xml:lang="ar">نوعية رخصة القيادة</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#Foreign -->
+
+    <owl:Class rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#Foreign">
+        <rdfs:subClassOf rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#Individual"/>
+        <rdfs:label xml:lang="ar">اجنبي</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#Gender -->
+
+    <owl:Class rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#Gender">
+        <rdfs:subClassOf rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#Profile"/>
+        <rdfs:label xml:lang="ar">الجنس</rdfs:label>
+        <rdfs:label xml:lang="ar">النوع</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#Individual -->
+
+    <owl:Class rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#Individual">
+        <rdfs:subClassOf rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#MInistryOfInterior"/>
+        <rdfs:comment xml:lang="ar">الاشخاص الذين تتم خدمتهم عبر وزارة الداخلية وهم قسمان مواطنين واجانب</rdfs:comment>
+        <rdfs:label xml:lang="ar">شخص</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#MInistryOfInterior -->
+
+    <owl:Class rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#MInistryOfInterior">
+        <rdfs:comment xml:lang="ar">هي الجهه الرسمية للدولة التي تقدم الخدمات الاساسية للمواطنين والتي من خلالها يتم توثيق المواليد والوفيات ، واصدار ارقام المواطنة وبطاقات الهوية الوطنية ، جوازات السفر وخدمات المرور مثل رخص القيادة وتسجيل المركبات كما تشمل ايضا خدمات هيئة الادلى الجنائية والتي تعنى بتراخيص حمل السلاح والفحص الامني للمواطنين</rdfs:comment>
+        <rdfs:label xml:lang="ar">وزارة الداخلية</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#MaritalStatus -->
+
+    <owl:Class rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#MaritalStatus">
+        <rdfs:subClassOf rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#Profile"/>
+        <rdfs:comment xml:lang="ar">لها عدة قيم ، اعزب ، متزوج ، ارمل ، مطلق .. الخ</rdfs:comment>
+        <rdfs:label xml:lang="ar">الحالة الاجتماعية</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#NationalCard -->
+
+    <owl:Class rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#NationalCard">
+        <rdfs:subClassOf rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#CivilRegistry"/>
+        <owl:hasKey rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasNationalNumber"/>
+        </owl:hasKey>
+        <owl:hasKey rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasNationalCardNumber"/>
+        </owl:hasKey>
+        <rdfs:label xml:lang="ar">البطاقة القومية</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#NationalNumber -->
+
+    <owl:Class rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#NationalNumber">
+        <rdfs:subClassOf rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#CivilRegistry"/>
+        <owl:hasKey rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasCitizenshipID"/>
+        </owl:hasKey>
+        <rdfs:label xml:lang="ar">الرقم الوطني</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#Nationality -->
+
+    <owl:Class rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#Nationality">
+        <rdfs:subClassOf rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#Profile"/>
+        <rdfs:label xml:lang="ar">الجنسية</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#NationalityType -->
+
+    <owl:Class rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#NationalityType">
+        <rdfs:subClassOf rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#Nationality"/>
+        <rdfs:comment xml:lang="ar">للجنسية عدة انواع مثلا جنسية بالميلاد ، جنسية بالتجنس .. الخ</rdfs:comment>
+        <rdfs:label xml:lang="ar">نوع الجنسية</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#Occupation -->
+
+    <owl:Class rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#Occupation">
+        <rdfs:subClassOf rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#Profile"/>
+        <rdfs:label xml:lang="ar">المهنة</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#Passport -->
+
+    <owl:Class rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#Passport">
+        <rdfs:subClassOf rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#Service"/>
+        <owl:hasKey rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasNationalNumber"/>
+        </owl:hasKey>
+        <owl:hasKey rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasPassportNumber"/>
+        </owl:hasKey>
+        <rdfs:label xml:lang="ar">جواز السفر</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#PassportType -->
+
+    <owl:Class rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#PassportType">
+        <rdfs:subClassOf rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#Passport"/>
+        <rdfs:comment xml:lang="ar">لجواز السفر اكثر من نوع فهنالك جواز سفر عادي واخر تجاري واخر طالب ودبلوماسي</rdfs:comment>
+        <rdfs:label xml:lang="ar">نوع جواز السفر</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#PlaceOfBirth -->
+
+    <owl:Class rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#PlaceOfBirth">
+        <rdfs:subClassOf rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#Profile"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#Profile -->
+
+    <owl:Class rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#Profile">
+        <rdfs:subClassOf rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#MInistryOfInterior"/>
+        <rdfs:comment xml:lang="ar">يحتوي على القيم المحددة لبعض الخدمات مثل النوع وفصيلة الدم ومراكز الخدمات وغيرها</rdfs:comment>
+        <rdfs:label xml:lang="ar">الملف الشخصي</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#Religion -->
+
+    <owl:Class rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#Religion">
+        <rdfs:subClassOf rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#Profile"/>
+        <rdfs:label xml:lang="ar">الديانة</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#Service -->
+
+    <owl:Class rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#Service">
+        <rdfs:subClassOf rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#MInistryOfInterior"/>
+        <rdfs:comment xml:lang="ar">الخدمة التي تقدمها وزارة الداخلية</rdfs:comment>
+        <rdfs:label xml:lang="ar">الخدمة</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#ServiceProvider -->
+
+    <owl:Class rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#ServiceProvider">
+        <rdfs:subClassOf rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#Profile"/>
+        <rdfs:comment xml:lang="ar">يقصد بها مجمعات خدمة الجمهور بالعاصمة والولايات والمكاتب والمراكز الفرعية التابعة لها التي تقدم خدماتها للمواطنين</rdfs:comment>
+        <rdfs:label xml:lang="ar">مقدم الخدمة</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#TrafficPolice -->
+
+    <owl:Class rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#TrafficPolice">
+        <rdfs:subClassOf rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#Service"/>
+        <rdfs:label xml:lang="ar">شرطة المرور</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#Vehicle -->
+
+    <owl:Class rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#Vehicle">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasVehicleRegistration"/>
+                <owl:allValuesFrom rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#VehicleRegistration"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#Asset"/>
+        <rdfs:label xml:lang="ar">مركبة</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#VehicleRegistration -->
+
+    <owl:Class rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#VehicleRegistration">
+        <rdfs:subClassOf rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#TrafficPolice"/>
+        <owl:hasKey rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasLicenseNumber"/>
+        </owl:hasKey>
+        <owl:hasKey rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasLicensePlate"/>
+        </owl:hasKey>
+        <rdfs:label xml:lang="ar">رخصة المركبات</rdfs:label>
+        <rdfs:label xml:lang="ar">شهادة بحث مركبة</rdfs:label>
+        <rdfs:label xml:lang="ar">شهادة تسجيل المركبات</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#VehicleType -->
+
+    <owl:Class rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#VehicleType">
+        <rdfs:subClassOf rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#Vehicle"/>
+        <rdfs:comment xml:lang="ar">يقصد بها  انواع المركبات المختلفة الخاصة والعامة والدراجات البخارية والكهربائية</rdfs:comment>
+        <rdfs:label xml:lang="ar">نوع المركبة</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#VehicleUsage -->
+
+    <owl:Class rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#VehicleUsage">
+        <rdfs:subClassOf rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#Vehicle"/>
+        <rdfs:comment xml:lang="ar">يعني بها نوعية استخدام المركبة هل هي خاصة ام عامة ام استثمار ..الخ</rdfs:comment>
+        <rdfs:label xml:lang="ar">إستخدام المركبة</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#Weapon -->
+
+    <owl:Class rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#Weapon">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasWeaponLicense"/>
+                <owl:allValuesFrom rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#WeaponLicense"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#Asset"/>
+        <rdfs:label xml:lang="ar">سلاح</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#WeaponLicense -->
+
+    <owl:Class rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#WeaponLicense">
+        <rdfs:subClassOf rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#CriminalEvidence"/>
+        <owl:hasKey rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#hasLicenseNumber"/>
+        </owl:hasKey>
+        <rdfs:label xml:lang="ar">ررخصة سلاح</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#WeaponType -->
+
+    <owl:Class rdf:about="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#WeaponType">
+        <rdfs:subClassOf rdf:resource="http://www.sudan-government.com/ontologies/mistryofinteriorontology.owl#Weapon"/>
+        <rdfs:comment xml:lang="ar">يقصد بها نوع السلاح مثل السلاح الصوتي والمطاطي والحي</rdfs:comment>
+        <rdfs:label xml:lang="ar">نوع السلاح</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+
